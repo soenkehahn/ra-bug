@@ -6,9 +6,6 @@ mod test {
 
     proptest! {
         #[test]
-        // deleting the opening curly brace (`{`)
-        // in the following line makes
-        // rust-analyzer hang.
-        fn test(_ in 0..10) {}
+        fn test(_ in 0..10) }
     }
 }
