@@ -4,12 +4,11 @@ fn main() {}
 mod test {
     use proptest::prelude::*;
 
-    fn foo(_: i32) {}
-
     proptest! {
         #[test]
-        fn bar(ast in 0..100) {
-            foo(ast);
-        }
+        // deleting the opening curly brace (`{`)
+        // in the following line makes
+        // rust-analyzer hang.
+        fn test(_ in 0..10) {}
     }
 }
